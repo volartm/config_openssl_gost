@@ -1,0 +1,164 @@
+source "https://rubygems.org"
+
+# TODO: get rid of rails-assets
+# require 'openssl'
+# OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+
+# general
+gem "rails", ">= 5.2.2"
+gem "rails-i18n", "~> 5.1"
+gem "puma", "~> 3.0"
+
+gem "activeadmin"
+
+# db
+gem "pg"
+
+# Webpacker
+gem "webpacker", "~> 3.5"
+
+# assets
+gem "bootstrap-sass", "~> 3.3.6"
+gem "sass-rails", "~> 5.0"
+gem "uglifier", ">= 1.3.0"
+gem "coffee-rails", "~> 4.2"
+gem "jbuilder", "~> 2.5"
+gem "font-awesome-rails"
+gem "wicked_pdf"
+gem "wkhtmltopdf-binary"
+# Super simple WYSIWYG editor
+gem "rack-cors", require: "rack/cors"
+gem "summernote-rails"
+gem "translit", "~> 0.1.5"
+
+# Simple, but flexible HTTP client library, with support for multiple backends.
+gem "faraday"
+gem "active_model_serializers", "~> 0.10.0"
+# This gem gives every ActiveRecord::Base object the possibility to do a deep
+# clone that includes user specified associations.
+gem "deep_cloneable", "~> 2.3.0"
+gem "dotenv-rails"
+gem "redis", "~> 4.0", ">= 4.0.1"
+# Optimized JSON
+gem "oj", "~> 3.4"
+# This gem lets your API users pass in and receive camelCased or dash-cased
+# keys, while your Rails app receives and produces snake_cased ones.
+gem "olive_branch"
+gem "resque", "~> 1.27", ">= 1.27.4"
+gem "resque-scheduler", "~> 4.3", ">= 4.3.1"
+gem "resque-web", "~> 0.0.12", require: "resque_web"
+gem "resque-scheduler-web", "~> 1.1"
+gem "capistrano-resque", "~> 0.2.2", require: false
+gem "mechanize", "~> 2.7", ">= 2.7.5"
+
+source "https://rails-assets.org" do
+  gem "rails-assets-jquery"
+  gem "rails-assets-jquery-ujs"
+  gem "rails-assets-bootstrap", "~> 3.3.7"
+  gem "rails-assets-metisMenu", "~> 2.7.0"
+  gem "rails-assets-pace"
+  gem "rails-assets-jquery-slimscroll"
+  gem "rails-assets-animate-css", "~> 3.5.2"
+  gem "rails-assets-Chart-js", "~> 2.5.0"
+  gem "rails-assets-select2", "~> 4.0.3"
+  gem "rails-assets-parsleyjs", "~> 2.7.0"
+  gem "rails-assets-bootstrap-datepicker", "~> 1.6.4"
+  gem "rails-assets-sweetalert", "1.1.3"
+  gem "rails-assets-jasny-bootstrap", "~> 3.1.3"
+  gem "rails-assets-toastr"
+  gem "rails-assets-jquery-sparkline"
+  gem "rails-assets-peity", "~> 3.2.1"
+  gem "rails-assets-bootstrap-select", "~> 1.12.2"
+  gem "rails-assets-date-fns"
+  gem "rails-assets-jquery-mask", "~> 1.14.15"
+  gem "rails-assets-dropzonejs"
+  gem 'rails-assets-bootstrap-touchspin', "~> 3.0.1"
+end
+
+# auth
+gem "devise"
+gem "pundit"
+gem "omniauth-esia", "~> 0.2", ">= 0.2.1"
+
+# misc
+gem "kaminari"
+gem "simple_form"
+# Form objects decoupled from models
+gem "reform"
+gem "cocoon"
+# Automatically load and include all common Rails form features.
+gem "reform-rails"
+gem "dry-validation"
+# Track changes to your models, for auditing or versioning. See how a model
+# looked at any stage in its lifecycle, revert it to any version, or restore it
+# after it has been destroyed.
+gem "paper_trail"
+gem "paper_trail-association_tracking"
+gem "aasm"
+gem "paperclip", "~> 5.0.0"
+# gem "remotipart", git: "https://github.com/spdawson/remotipart.git"
+# Rails jQuery file uploads via standard Rails "remote: true" forms.
+gem "remotipart", "~> 1.4", ">= 1.4.2"
+gem "dragonfly", "~> 1.0.11"
+gem "shrine", "~> 2.0"
+gem "avatar_magick", "~> 1.0.1"
+# A gem that lets you stream a zip file from rails
+gem "zipline"
+# Exception tracking and logging from Ruby to Rollbar
+# gem "rollbar", "~> 2.15"
+gem "rest-client"
+gem "slim-rails", "~> 3.1", ">= 3.1.3"
+# Harry"s Data Migrations are a way to manage changes to seed data in a rails
+# app in a similar way to how schema migrations are handled.
+gem "seed_migration", "~> 1.2", ">= 1.2.3"
+gem "validacity", git: "https://github.com/zinovyev/validacity.git"
+gem "activerecord-session_store", "~> 1.1", ">= 1.1.1"
+gem "sentry-raven"
+gem "gon"
+gem 'roda'
+gem "paranoia", ">= 2.2"
+
+# reading and writing xlsx
+gem "rubyzip", ">= 1.2.1"
+# Axlsx: Office Open XML Spreadsheet Generation
+# Use axlsx from master since latest release depends on rubyzip 1.0, but we
+# need higher version in order to use roo
+gem "axlsx", git: "https://github.com/randym/axlsx.git", ref: "c8ac844"
+# Spreadsheet templates for Rails
+gem "axlsx_rails"
+# Roo implements read access for all common spreadsheet types.
+gem "roo", "~> 2.7.0"
+
+# New Relic is a performance management system
+gem "newrelic_rpm"
+
+gem "foreman"
+
+gem "letter_opener", "~> 1.6"
+gem "letter_opener_web", "~> 1.3", ">= 1.3.3"
+
+group :development, :test do
+  gem 'bootsnap', require: false
+  gem "puma-fsevent_cleanup"
+  gem "pry-rails"
+  gem "rspec-rails", "~> 3.8"
+  gem "fabrication"
+  # gem "rack-mini-profiler"
+  gem "railroady"
+  gem "vcr", "~> 4.0", require: false
+  gem "faker", git: "https://github.com/stympy/faker.git", branch: "master"
+  gem "rubocop", ">= 0.47", require: false
+  gem "rails-erd"
+  gem "pry-nav"
+  gem "pry-remote"
+end
+
+# gem "common", path: "vendor/engines/common"
+gem 'whenever', require: false
+
+gem "xmpp4r"
