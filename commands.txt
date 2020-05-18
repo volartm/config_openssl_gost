@@ -1,0 +1,8 @@
+OpenSSL::VERSION
+OpenSSL::OPENSSL_VERSION
+OpenSSL::Config
+openssl engine -t
+openssl version -a
+OpenSSL::Engine.engines
+OpenSSL::Config::DEFAULT_CONFIG_FILE
+
