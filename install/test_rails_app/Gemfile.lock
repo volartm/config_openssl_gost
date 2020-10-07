@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/volartm/openssl_patched.git
-  revision: 4678aa6ae09d08542a36de45ada457f35e132040
+  remote: https://gitlab+deploy-token-10:jz8m25znE4k6qpSvyPKE@git.ceki.ru/ceki/openssl_patched.git
+  revision: 811e248d0f76c0a77130c449b25a76c5907e2554
   specs:
     openssl (2.2.0)
 
@@ -169,7 +169,7 @@ GEM
       railties (>= 5.0)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.4)
+    websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
 
