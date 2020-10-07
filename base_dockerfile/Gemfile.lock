@@ -375,7 +375,7 @@ GEM
       pry (~> 0.9)
       slop (~> 3.0)
     public_suffix (3.0.3)
-    puma (3.12.0)
+    puma (3.12.6)
     puma-fsevent_cleanup (0.1.1)
       puma (~> 3.0)
     pundit (1.1.0)
@@ -679,7 +679,7 @@ DEPENDENCIES
   pry-nav
   pry-rails
   pry-remote
-  puma (~> 3.0)
+  puma (~> 3.12)
   puma-fsevent_cleanup
   pundit
   rack-cors
