@@ -53,4 +53,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "openssl",  git: "https://gitlab+deploy-token-10:jz8m25znE4k6qpSvyPKE@git.ceki.ru/ceki/openssl_patched.git"
+gem "openssl",  git: "git@github.com:volartm/openssl_patched.git"
