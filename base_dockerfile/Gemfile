@@ -104,7 +104,7 @@ gem "paperclip", "~> 5.0.0"
 # gem "remotipart", git: "https://github.com/spdawson/remotipart.git"
 # Rails jQuery file uploads via standard Rails "remote: true" forms.
 gem "remotipart", "~> 1.4", ">= 1.4.2"
-gem "dragonfly", "~> 1.0.11"
+gem "dragonfly", "~> 1.4.0"
 gem "shrine", "~> 2.0"
 gem "avatar_magick", "~> 1.0.1"
 # A gem that lets you stream a zip file from rails
