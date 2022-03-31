@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/volartm/openssl_patched.git
-  revision: 4678aa6ae09d08542a36de45ada457f35e132040
+  remote: git@github.com:volartm/openssl_patched.git
+  revision: a5ccc495a94b7e05d14fb7e22a360e9a1a0845e8
   specs:
     openssl (2.2.0)
 
@@ -93,7 +93,8 @@ GEM
     nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     public_suffix (4.0.3)
-    puma (3.12.4)
+    puma (4.3.12)
+      nio4r (~> 2.0)
     rack (2.2.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -183,7 +184,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   openssl!
-  puma (~> 3.7)
+  puma (~> 4.3)
   rails (~> 5.1.5)
   sass-rails (~> 5.0)
   selenium-webdriver
