@@ -54,7 +54,7 @@ gem "resque-scheduler", "~> 4.3", ">= 4.3.1"
 gem "resque-web", "~> 0.0.12", require: "resque_web"
 gem "resque-scheduler-web", "~> 1.1"
 gem "capistrano-resque", "~> 0.2.2", require: false
-gem "mechanize", "~> 2.7", ">= 2.7.5"
+gem "mechanize", "~> 2.8"
 
 source "https://rails-assets.org" do
   gem "rails-assets-jquery"
