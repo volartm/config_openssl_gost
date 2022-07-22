@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/volartm/openssl_patched.git
-  revision: 4678aa6ae09d08542a36de45ada457f35e132040
+  remote: git@github.com:volartm/openssl_patched.git
+  revision: a5ccc495a94b7e05d14fb7e22a360e9a1a0845e8
   specs:
     openssl (2.2.0)
 
@@ -158,7 +158,7 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.6)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
